@@ -16,6 +16,7 @@ public class Presentacion {
     private int id;
     private String nombre;
     private String descripcion;
+    private String img;
     
     //constructores
 
@@ -23,9 +24,10 @@ public class Presentacion {
     }
     
     
-    public Presentacion(String nombre, String descripcion) {
+    public Presentacion(String nombre, String descripcion, String img) {
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.img = img;
     }
     
     //getters and setters
@@ -53,6 +55,16 @@ public class Presentacion {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+    
+    
     
     
     

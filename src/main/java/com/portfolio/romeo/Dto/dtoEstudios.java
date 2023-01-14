@@ -12,13 +12,15 @@ public class dtoEstudios {
     private String nombreE;
     @NotBlank
     private String DescripcionE;
+    private String img;
 
     public dtoEstudios() {
     }
 
-    public dtoEstudios(String nombreE, String DescripcionE) {
+    public dtoEstudios(String nombreE, String DescripcionE, String img) {
         this.nombreE = nombreE;
         this.DescripcionE = DescripcionE;
+        this.img = img;
     }
     
     //getter and setter
@@ -38,6 +40,15 @@ public class dtoEstudios {
     public void setDescripcionE(String DescripcionE) {
         this.DescripcionE = DescripcionE;
     }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+    
     
     
 }

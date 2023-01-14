@@ -15,15 +15,17 @@ public class dtoCertificados {
     private String nombreC;
     @NotBlank
     private String descripcionC;
+    private String img;
     
     //Constructores
 
     public dtoCertificados() {
     }
 
-    public dtoCertificados(String nombreC, String descripcionC) {
+    public dtoCertificados(String nombreC, String descripcionC, String img) {
         this.nombreC = nombreC;
         this.descripcionC = descripcionC;
+        this.img = img;
     }
     
     //getters and Setters
@@ -42,6 +44,14 @@ public class dtoCertificados {
 
     public void setDescripcionC(String descripcionC) {
         this.descripcionC = descripcionC;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
     
     

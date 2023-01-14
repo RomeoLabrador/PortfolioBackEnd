@@ -16,15 +16,17 @@ public class Certificados {
     private int id;
     private String nombreC;
     private String descripcionC;
+    private String img;
     
     //Constructores
 
     public Certificados() {
     }
 
-    public Certificados(String nombre, String descripcion) {
+    public Certificados(String nombre, String descripcion,String img) {
         this.nombreC = nombre;
         this.descripcionC = descripcion;
+        this.img = img;
     }
     
     //Getters And Setters
@@ -51,6 +53,14 @@ public class Certificados {
 
     public void setDescripcionC(String descripcion) {
         this.descripcionC = descripcion;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
     
     

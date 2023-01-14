@@ -55,7 +55,7 @@ public class CPresentacion {
             return new ResponseEntity(new Mensaje("El nombre es OBLIGATORIO"), HttpStatus.BAD_REQUEST);
         if(sPresentacion.existsByNombre(dtopresentacion.getNombre()))
             return new ResponseEntity(new Mensaje("Esa presentacion ya existe"), HttpStatus.BAD_REQUEST);
-        Presentacion presentacion = new Presentacion(dtopresentacion.getNombre(),dtopresentacion.getDescripcion());
+        Presentacion presentacion = new Presentacion(dtopresentacion.getNombre(),dtopresentacion.getDescripcion(),dtopresentacion.getImg());
         sPresentacion.save(presentacion);
         
         return new ResponseEntity(new Mensaje("Presentacion Agregada"),HttpStatus.OK);
@@ -77,6 +77,7 @@ public class CPresentacion {
         
         presentacion.setNombre(dtopresentacion.getNombre());
         presentacion.setDescripcion(dtopresentacion.getDescripcion());
+        presentacion.setImg(dtopresentacion.getImg());
         
         sPresentacion.save(presentacion);
         

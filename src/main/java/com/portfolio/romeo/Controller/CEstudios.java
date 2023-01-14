@@ -51,7 +51,7 @@ public class CEstudios {
             return new ResponseEntity(new Mensaje("El nombre es OBLIGATORIO"), HttpStatus.BAD_REQUEST);
         if(sEstudios.existsByNombreE(dtoestudios.getNombreE()))
             return new ResponseEntity(new Mensaje("Ese Estudio ya existe"), HttpStatus.BAD_REQUEST);
-        Estudios estudio = new Estudios(dtoestudios.getNombreE(),dtoestudios.getDescripcionE());
+        Estudios estudio = new Estudios(dtoestudios.getNombreE(),dtoestudios.getDescripcionE(),dtoestudios.getImg());
         sEstudios.save(estudio);
         
         return new ResponseEntity(new Mensaje("Estudio Agregada"),HttpStatus.OK);
@@ -73,6 +73,7 @@ public class CEstudios {
         
         estudios.setNombreE(dtoestudios.getNombreE());
         estudios.setDescripcionE(dtoestudios.getDescripcionE());
+        estudios.setImg(dtoestudios.getImg());
         
         sEstudios.save(estudios);
         

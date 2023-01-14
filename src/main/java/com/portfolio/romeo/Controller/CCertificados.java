@@ -54,7 +54,7 @@ public class CCertificados {
             return new ResponseEntity(new Mensaje("El nombre es OBLIGATORIO"), HttpStatus.BAD_REQUEST);
         if(sCertificados.existsByNombreC(dtocertificados.getNombreC()))
             return new ResponseEntity(new Mensaje("Ese Estudio ya existe"), HttpStatus.BAD_REQUEST);
-        Certificados certificado = new Certificados(dtocertificados.getNombreC(),dtocertificados.getDescripcionC());
+        Certificados certificado = new Certificados(dtocertificados.getNombreC(),dtocertificados.getDescripcionC(), dtocertificados.getImg());
         sCertificados.save(certificado);
         
         return new ResponseEntity(new Mensaje("Estudio Agregada"),HttpStatus.OK);
@@ -76,6 +76,7 @@ public class CCertificados {
         
         certificados.setNombreC(dtocertificados.getNombreC());
         certificados.setDescripcionC(dtocertificados.getDescripcionC());
+        certificados.setImg(dtocertificados.getImg());
         
         sCertificados.save(certificados);
         
